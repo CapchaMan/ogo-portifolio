@@ -1,76 +1,59 @@
 import React from "react";
-import profilePic from "./assets/profile.jpg"; // put your image in src/assets/
 
 function App() {
   return (
-    <div className="min-h-screen bg-base-200 flex flex-col items-center justify-center p-10">
-      {/* Profile Card */}
-      <div className="card w-full md:w-2/3 lg:w-1/2 bg-base-100 shadow-xl p-8 rounded-2xl text-center">
-        <figure className="mb-6">
-          <img
-            src={profilePic}
-            alt="Ogo Anthony Chinedu"
-            className="w-32 h-32 object-cover rounded-full mx-auto border-4 border-primary"
-          />
-        </figure>
-
-        <h1 className="text-3xl font-bold text-primary mb-3">
+    <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center px-6 py-10 font-sans">
+      {/* Header Section */}
+      <header className="text-center mb-10">
+        <img
+          src="./profile.jpg"
+          alt="Ogo Anthony Chinedu"
+          className="w-32 h-32 rounded-full shadow-md object-cover mx-auto mb-4 border-4 border-blue-500"
+        />
+        <h1 className="text-3xl font-bold text-gray-800">
           Ogo Anthony Chinedu
         </h1>
-
-        <p className="text-lg font-medium text-gray-700 mb-4">
+        <p className="text-gray-600 mt-2 text-lg">
           Software Engineer / UI Engineer | Website Developer | Python Frontend & Backend Engineer
         </p>
+      </header>
 
-        <div className="space-y-1 text-gray-600">
-          <p>📍 Enugu, Nigeria</p>
-          <p>📞 +2347080143370 | +2348137429301</p>
-          <p>✉️ ogohchineduanthony@gmail.com</p>
-          <a
-            href="https://github.com/Captchaman"
-            target="_blank"
-            rel="noreferrer"
-            className="text-primary font-semibold hover:underline"
-          >
-            GitHub: Captchaman
-          </a>
-        </div>
-      </div>
+      {/* Contact Info */}
+      <section className="text-center text-gray-700 mb-10">
+        <p>📍 Enugu, Nigeria</p>
+        <p>📞 +2347080143370 | +2348137429301</p>
+        <p>✉️ ogohchineduanthony@gmail.com</p>
+      </section>
 
-      {/* Gallery Section */}
-      <div className="mt-12 grid md:grid-cols-3 gap-6 w-full md:w-2/3 lg:w-3/4">
-        <div className="card bg-base-100 shadow-md">
-          <figure>
-            <img src="https://picsum.photos/400/300?random=1" alt="UI Work" />
-          </figure>
-          <div className="card-body">
-            <h2 className="card-title">UI Design Project</h2>
-            <p>Creative front-end interface for a modern web app.</p>
-          </div>
-        </div>
+      {/* Links Section */}
+      <section className="flex flex-col items-center space-y-4">
+        <a
+          href="https://github.com/CapchaMan"
+          target="_blank"
+          rel="noreferrer"
+          className="bg-gray-900 text-white px-6 py-3 rounded-lg shadow-md hover:bg-gray-700 transition duration-300"
+        >
+          🌐 Visit My GitHub Portfolio
+        </a>
 
-        <div className="card bg-base-100 shadow-md">
-          <figure>
-            <img src="https://picsum.photos/400/300?random=2" alt="Backend Work" />
-          </figure>
-          <div className="card-body">
-            <h2 className="card-title">Backend API</h2>
-            <p>Robust Django + Python backend architecture.</p>
-          </div>
-        </div>
+        <a
+          href="https://www.figma.com/make/2RQ1ycTxzHmpEa8DrMpckc/Share-UI-Design-Showcase?node-id=0-1&t=awS4FREXeY3eSv0U-1"
+          target="_blank"
+          rel="noreferrer"
+          className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition duration-300"
+        >
+          🎨 View My Figma UI/UX Design Showcase
+        </a>
+      </section>
 
-        <div className="card bg-base-100 shadow-md">
-          <figure>
-            <img src="https://picsum.photos/400/300?random=3" alt="Fullstack" />
-          </figure>
-          <div className="card-body">
-            <h2 className="card-title">Fullstack Website</h2>
-            <p>Complete responsive portfolio website with animations.</p>
-          </div>
-        </div>
-      </div>
+      {/* Footer */}
+      <footer className="mt-12 text-center text-sm text-gray-500">
+        <p>© {new Date().getFullYear()} Ogo Anthony Chinedu. All Rights Reserved.</p>
+      </footer>
     </div>
   );
 }
 
 export default App;
+
+
